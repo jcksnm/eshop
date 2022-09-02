@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    Inventory
+</head>
+
+<body>
+    <div>
+    {% for i in inventory %}
+        <form method="post">
+            <div>Item ID: {{i.id}}</div>
+            <div>Name: {{i.item_name}}</div>
+            <div>Qualtity Available: {{i.item_quantity}}</div>
+            <div>Item Price: {{i.item_price}}</div>
+            <input type="hidden" name="id" value="{{i.id}}"></input>
+            <input type="hidden" name="quantity" value="{{i.item_quantity}}"></input>
+            <input type="submit" value="Add to Cart"></input>
+        </form>
+    {% endfor %}
+    </div>
+
+</body>
+
+</html>
