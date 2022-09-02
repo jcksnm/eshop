@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>
+      Welcome to the eshop!
+    </title>
+    <style>
+      
+      .imagetable{
+	  margin-left: auto;
+	  margin-right: auto;
+      }
+
+      .hellologo {
+	  text-align: center;
+      }
+
+      figure {
+	  text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+	<a class="navbar-brand" href="#">[eshop]</a>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+	  <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('signUp')}}">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('signIn')}}">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('cart')}}">Cart</a>
+            </li>
+	    
+
+	    <li class="nav-item">
+	      <a class="nav-link" href="{{url_for('search')}}">Search</a>
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </nav><br>
+    <div class="hellologo">
+      <img src="/static/logo.png">
+      <img src="/static/logo1.png">
+      <img src="/static/logo2.png">
+      <img src="/static/logo3.png">
+    </div>
+    <!-- <label for="exampleDataList" class="form-label"></label> -->
+    <!-- <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search our inventory..." style="text-align: center"> -->
+    <!-- <datalist id="datalistOptions"> -->
+    <!-- </datalist> -->
+    <br>
+    <h4 style="text-align:center">[what's hot right now]</h4><br>
+    <table class="imagetable">
+      <tr>
+	<td>
+	  <figure class="fig1">
+	    <img src="/static/Galaxy.jpg" class="img-thumbnail" alt="...">
+	    <figcaption>[android galaxy s21]</figcaption>
+	    <form method="post">
+	      <input type="submit" name='cart' value="[add galaxy to cart]" >
+	    </form>
+	  </figure>
+	</td>
+	<td>
+	  <figure>
+	    <img src="/static/Beats.jpeg" class="img-thumbnail" alt="...">
+	    <figcaption>[beats wired]</figcaption>
+	    <form method="post">
+	      <input type="submit" name='cart' value="[add beats to cart]" >
+	    </form>
+	  </figure>
+	</td>
+	<td>
+	  <figure>
+	    <img src="/static/Arduino.jpeg" class="img-thumbnail" alt="...">
+	    <figcaption>[arduino uno]</figcaption>
+	    <form method="post">
+	      <input type="submit" name='cart' value="[add arduino to cart]" >
+	    </form>
+	  </figure>
+	</td>
+      </tr>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
